@@ -12,10 +12,13 @@ Por esse motivo, o time de marketing requisitou ao time de dados, uma seleção 
 Selecionar os mais valiosos clientes para formar o programa de fidelidade "INSIDERS" utilizando um conjunto de dados com as vendas de produtos entre Novembro de 2015 até Dezembro 2017.
 
 ## 3.0. Produto Final
+Uma tabela, ordenada pelo faturamento total do cluster com suas características. O cluster com maior faturamento será considerado os clientes "INSIDERS".
 
 ## 4.0. Algoritmos Ensaiados
+Realizei os ensaios com os algoritmos: Kmeans, Gaussian Mixture Model(GMM), Hierarchical Clustering e DBSCAN.  
 
 ## 5.0. Ferramentas Utilizadas
+Python 3.8, Scikit-learn e SciPy.
 
 ## 6.0. Estratégia da Solução
 
