@@ -21,8 +21,12 @@ Realizei os ensaios com os algoritmos: Kmeans, Gaussian Mixture Model(GMM), Hier
 Python 3.8, Scikit-learn e SciPy.
 
 ## 6.0. Estratégia da Solução
+Para conseguirmos identificar o grupo "INSIDERS", iremos utilizar a técnica para Feature Engineering: RFM (Recência, Frequência e Monetização). Após isso, iremos utilizar das métricas de validação WSS (Within-Cluster Sum of Square) e SS (Silhouette Score). Por último iremos fazer a visualização gráfica e separarmos os grupos entre INSIDERS e outros clusters.
 
 ## 7.0. O passo a passo
+**Passo 01:** Realizar a Feature Engineering
+**Passo 02:** Métricas de validação de Clustering
+**Passo 03:** Análise de Cluster
 
 ## 8.0. Os top 3 insights
 
