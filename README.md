@@ -35,5 +35,15 @@ Para conseguirmos identificar o grupo "INSIDERS", iremos utilizar a técnica par
 ## 9.0. Resultados
 
 ## 10.0. Conclusão
+### Cluster Insider
+    - Número de customers: 1182 (20% do customers )
+    
+    - Faturamento médio: $4367,00 dólares
+    
+    - Recência média: 96 dias
+    
+    - Média de Produtos comprados: 190 produtos
+    
+    - Frequência de Produtos comprados: 0.28 produtos/dia
 
 ## 11.0. Próximos Passos
