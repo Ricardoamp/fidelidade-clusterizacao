@@ -31,8 +31,16 @@ Para conseguirmos identificar o grupo "INSIDERS", iremos utilizar a técnica par
 **Passo 03:** Análise de Cluster
 
 ## 8.0. Os top 3 insights
+### 1. O cluster insider possuem um volume de compra de produtos de 42.59%
+### 2. O cluster insider possuem um faturamento de compras de 51.08%
+### 3. O cluser insiders tem a média de devoluções acima da média geral
 
 ## 9.0. Resultados
+Utilizei o modelo de Machile Learning Gaussian Mixture para encontrarmos os agrupamentos (clusterização) para esses dados.
+
+Uma inspeção visual podemos entender os agrupamentos formados pelo modelo.
+
+Por fim, podemos separar em informações relevantes para encontrarmos o grupo insiders, usando como referência o faturamento, e também de outros grupos para entregarmos para a equipe de negócios.
 
 ## 10.0. Conclusão
 ### Cluster Insider
@@ -47,3 +55,4 @@ Para conseguirmos identificar o grupo "INSIDERS", iremos utilizar a técnica par
     - Frequência de Produtos comprados: 0.28 produtos/dia
 
 ## 11.0. Próximos Passos
+Utilizar a computação em nuvem(AWS ou Google cloud), criar uma API com o modelo e colocarmos um local para "subir" novos dados e encontramos qual cluster esse novo cliente poderá fazer parte.
