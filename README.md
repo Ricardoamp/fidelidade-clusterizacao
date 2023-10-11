@@ -25,7 +25,9 @@ Para conseguirmos identificar o grupo "INSIDERS", iremos utilizar a técnica par
 
 ## 7.0. O passo a passo
 **Passo 01:** Realizar a Feature Engineering
+
 **Passo 02:** Métricas de validação de Clustering
+
 **Passo 03:** Análise de Cluster
 
 ## 8.0. Os top 3 insights
