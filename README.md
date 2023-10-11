@@ -26,14 +26,16 @@ Para conseguirmos identificar o grupo "INSIDERS", iremos utilizar a técnica par
 ## 7.0. O passo a passo
 **Passo 01:** Realizar a Feature Engineering
 
-**Passo 02:** Métricas de validação de Clustering
+**Passo 02:** Realizar ensaios com algoritmos de Machine Learning
 
-**Passo 03:** Análise de Cluster
+**Passo 03:** Métricas de validação de Clustering
+
+**Passo 04:** Análise de Cluster
 
 ## 8.0. Os top 3 insights
-### 1. O cluster insider possuem um volume de compra de produtos de 42.59%
-### 2. O cluster insider possuem um faturamento de compras de 51.08%
-### 3. O cluser insiders tem a média de devoluções acima da média geral
+### 1. O cluster 3(insider) possuem um volume de compra de produtos de 42.59%
+### 2. O cluster 3(insider) possuem um faturamento de compras de 51.08%
+### 3. O cluster 3(insider) tem a média de devoluções acima da média geral
 
 ## 9.0. Resultados
 Utilizei o modelo de Machile Learning Gaussian Mixture para encontrarmos os agrupamentos (clusterização) para esses dados.
