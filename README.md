@@ -69,4 +69,4 @@ Por fim, podemos separar em informações relevantes para encontrarmos o grupo i
     - Frequência de Produtos comprados: 0.33 produtos/dia
 
 ## 11.0. Próximos Passos
-Utilizar a computação em nuvem(AWS ou Google cloud), criar uma API com o modelo e colocarmos um local para "subir" novos dados e encontramos qual cluster esse novo cliente poderá fazer parte.
+Utilizar a computação em nuvem (AWS ou Google Cloud) representa uma estratégia avançada para otimizar nosso sistema. Propomos a criação de uma API integrada com nosso modelo, estabelecendo um ponto centralizado para a incorporação de novos dados. Essa abordagem permitirá não apenas a alocação eficiente dos dados, mas também a identificação do cluster mais adequado para a integração do novo cliente.
