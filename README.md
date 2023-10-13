@@ -1,4 +1,5 @@
 # Projeto: Programa de Fidelidade com Clusterização
+Foto de NASA na Unsplash
 ## 1.0. Descrição
 Uma empresa que comercializa produtos de segunda linha de várias marcas a um preço menor, através de um e-commerce.
 
