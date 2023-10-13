@@ -1,5 +1,10 @@
 # Projeto: Programa de Fidelidade com Clusterização
-Foto de NASA na Unsplash
+<div align="center">    
+  <img src="./img/nasa-Q1p7bh3SHj8-unsplash.jpg" alt="Foto de NASA na Unsplash">
+
+    Foto de NASA na Unsplash
+</div>
+
 ## 1.0. Descrição
 Uma empresa que comercializa produtos de segunda linha de várias marcas a um preço menor, através de um e-commerce.
 
@@ -34,16 +39,21 @@ Para conseguirmos identificar o grupo "INSIDERS", iremos utilizar a técnica par
 **Passo 04:** Análise de Cluster
 
 ## 8.0. Os top 3 insights
-### 1. O cluster 3(insider) possuem um volume de compra de produtos de 42.59%
-### 2. O cluster 3(insider) possuem um faturamento de compras de 51.08%
-### 3. O cluster 3(insider) tem a média de devoluções acima da média geral
+### 1. O cluster 4(insider) possuem um volume de compra maior comparados aos outros clusters.
+![h1](./img/h1.png)
+### 2. O cluster 4(insider) possuem um faturamento de compras maior comparados aos outros clusters
+![h2](./img/h2.png)
+### 3. O cluster 4(insider) tem a média de devoluções acima da média geral.
+![h3](./img/h3.png)
 
 ## 9.0. Resultados
 Utilizei o modelo de Machile Learning Gaussian Mixture para encontrarmos os agrupamentos (clusterização) para esses dados.
 
 Uma inspeção visual podemos entender os agrupamentos formados pelo modelo.
+![cluster](./img/vizualization.png)
 
 Por fim, podemos separar em informações relevantes para encontrarmos o grupo insiders, usando como referência o faturamento, e também de outros grupos para entregarmos para a equipe de negócios.
+![análise](./img/analyse.png)
 
 ## 10.0. Conclusão
 ### Cluster Insider
