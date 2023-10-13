@@ -58,15 +58,15 @@ Por fim, podemos separar em informações relevantes para encontrarmos o grupo i
 
 ## 10.0. Conclusão
 ### Cluster Insider
-    - Número de customers: 1182 (20% do customers )
+    - Número de customers: 1936 (34% dos clientes )
     
-    - Faturamento médio: $4367,00 dólares
+    - Faturamento médio: $3766,34 dólares
     
-    - Recência média: 96 dias
+    - Recência média: 79 dias
     
-    - Média de Produtos comprados: 190 produtos
+    - Média de Produtos comprados: 205 produtos
     
-    - Frequência de Produtos comprados: 0.28 produtos/dia
+    - Frequência de Produtos comprados: 0.33 produtos/dia
 
 ## 11.0. Próximos Passos
 Utilizar a computação em nuvem(AWS ou Google cloud), criar uma API com o modelo e colocarmos um local para "subir" novos dados e encontramos qual cluster esse novo cliente poderá fazer parte.
