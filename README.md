@@ -41,20 +41,20 @@ Para conseguirmos identificar o grupo "INSIDERS", iremos utilizar a técnica par
 
 ## 8.0. Os top 3 insights
 ### 1. O cluster 4(insider) possuem um volume de compra maior comparados aos outros clusters.
-![h1](./img/h1.png)
+![h1](./reports/figures/h1.png)
 ### 2. O cluster 4(insider) possuem um faturamento de compras maior comparados aos outros clusters
-![h2](./img/h2.png)
+![h2](./reports/figures/h2.png)
 ### 3. O cluster 4(insider) tem a média de devoluções acima da média geral.
-![h3](./img/h3.png)
+![h3](./reports/figures/h3.png)
 
 ## 9.0. Resultados
 Utilizei o modelo de Machile Learning Gaussian Mixture para encontrarmos os agrupamentos (clusterização) para esses dados.
 
 Uma inspeção visual podemos entender os agrupamentos formados pelo modelo.
-![cluster](./img/vizualization.png)
+![cluster](./reports/figures/vizualization.png)
 
 Por fim, podemos separar em informações relevantes para encontrarmos o grupo insiders, usando como referência o faturamento, e também de outros grupos para entregarmos para a equipe de negócios.
-![análise](./img/analyse.png)
+![análise](./reports/figures/analyse.png)
 
 ## 10.0. Conclusão
 ### Cluster Insider
