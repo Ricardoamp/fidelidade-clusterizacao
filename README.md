@@ -25,30 +25,38 @@ Uma tabela, ordenada pelo faturamento total do cluster com suas características
 Realizei os ensaios com os algoritmos: Kmeans, Gaussian Mixture Model(GMM), Hierarchical Clustering e DBSCAN.  
 
 ## 5.0. Ferramentas Utilizadas
-Python 3.8, Scikit-learn e SciPy.
+Python 3.10, Scikit-learn e SciPy.
 
 ## 6.0. Estratégia da Solução
-Para conseguirmos identificar o grupo "INSIDERS", iremos utilizar a técnica para Feature Engineering: RFM (Recência, Frequência e Monetização). Após isso, iremos utilizar das métricas de validação WSS (Within-Cluster Sum of Square) e SS (Silhouette Score). Por último iremos fazer a visualização gráfica e separarmos os grupos entre INSIDERS e outros clusters.
+Para conseguirmos identificar o grupo "INSIDERS", iremos utilizar a técnica para Feature Engineering: RFM (Recência, Frequência e Monetização). Como essas features são fortemente assimétricas, aplicamos `log1p` antes do `MinMaxScaler` (Data Preparation) e definimos que a clusterização roda diretamente sobre esse espaço RFM escalado, e não sobre um embedding PCA/UMAP/t-SNE — usados somente para exploração visual (Feature Selection). A escolha do algoritmo e do número de clusters é guiada pela métrica de validação SS (Silhouette Score). Por último iremos fazer a visualização gráfica e separarmos os grupos entre INSIDERS e outros clusters.
 
 ## 7.0. O passo a passo
-**Passo 01:** Realizar a Feature Engineering
+**Passo 01:** Descrição e filtragem dos dados
 
-**Passo 02:** Realizar ensaios com algoritmos de Machine Learning
+**Passo 02:** Realizar a Feature Engineering (RFM)
 
-**Passo 03:** Métricas de validação de Clustering
+**Passo 03:** Análise Exploratória dos Dados (EDA) e estudo do espaço (PCA, UMAP, t-SNE e embedding de árvore, usados apenas para exploração visual)
 
-**Passo 04:** Análise de Cluster
+**Passo 04:** Data Preparation (log1p + MinMaxScaler) e Feature Selection
+
+**Passo 05:** Realizar ensaios com algoritmos de Machine Learning e métricas de validação de Clustering (SS)
+
+**Passo 06:** Treinamento do modelo final
+
+**Passo 07:** Análise de Cluster e teste das hipóteses de negócio
+
+**Passo 08:** Deploy (persistência do modelo/scaler e exportação da tabela final)
 
 ## 8.0. Os top 3 insights
-### 1. O cluster 4(insider) possuem um volume de compra maior comparados aos outros clusters.
+### 1. Os clientes do cluster 4 (insider) somam 29,31% do volume de produtos comprados, quase 3x o mínimo de 10% esperado.
 ![h1](./reports/figures/h1.png)
-### 2. O cluster 4(insider) possuem um faturamento de compras maior comparados aos outros clusters
+### 2. Os clientes do cluster 4 (insider) somam 38,71% do faturamento (GMV) total, quase 4x o mínimo de 10% esperado.
 ![h2](./reports/figures/h2.png)
-### 3. O cluster 4(insider) tem a média de devoluções acima da média geral.
+### 3. O cluster 4 (insider) tem a média de devoluções (74,70) mais que o dobro da média geral (31,27).
 ![h3](./reports/figures/h3.png)
 
 ## 9.0. Resultados
-Utilizei o modelo de Machile Learning Gaussian Mixture para encontrarmos os agrupamentos (clusterização) para esses dados.
+Utilizei o modelo de Machine Learning Gaussian Mixture (GMM), com k=5, para encontrarmos os agrupamentos (clusterização) para esses dados, alcançando um Silhouette Score de 0,072. O k=5 foi escolhido em vez do maior Silhouette Score estatístico (k=2, uma divisão grosseira da base ao meio) por isolar um segmento pequeno e acionável de clientes de elite, alinhado ao objetivo de negócio do programa INSIDERS.
 
 Uma inspeção visual podemos entender os agrupamentos formados pelo modelo.
 ![cluster](./reports/figures/vizualization.png)
@@ -58,15 +66,15 @@ Por fim, podemos separar em informações relevantes para encontrarmos o grupo i
 
 ## 10.0. Conclusão
 ### Cluster Insider
-    - Número de customers: 1936 (34% dos clientes )
+    - Número de customers: 753 (13,22% dos clientes )
     
-    - Faturamento médio: $3766,34 dólares
+    - Faturamento médio: $5.194,96 dólares
     
-    - Recência média: 79 dias
+    - Recência média: 13,62 dias
     
     - Média de Produtos comprados: 205 produtos
     
-    - Frequência de Produtos comprados: 0.33 produtos/dia
+    - Frequência de compras: 0,04 compras/dia
 
 ## 11.0. Próximos Passos
 Utilizar a computação em nuvem (AWS ou Google Cloud) representa uma estratégia avançada para otimizar nosso sistema. Propomos a criação de uma API integrada com nosso modelo, estabelecendo um ponto centralizado para a incorporação de novos dados. Essa abordagem permitirá não apenas a alocação eficiente dos dados, mas também a identificação do cluster mais adequado para a integração do novo cliente.
