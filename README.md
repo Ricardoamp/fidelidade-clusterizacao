@@ -78,3 +78,25 @@ Por fim, podemos separar em informações relevantes para encontrarmos o grupo i
 
 ## 11.0. Próximos Passos
 Utilizar a computação em nuvem (AWS ou Google Cloud) representa uma estratégia avançada para otimizar nosso sistema. Propomos a criação de uma API integrada com nosso modelo, estabelecendo um ponto centralizado para a incorporação de novos dados. Essa abordagem permitirá não apenas a alocação eficiente dos dados, mas também a identificação do cluster mais adequado para a integração do novo cliente.
+
+## 12.0. Como Executar o Projeto
+**Pré-requisitos:** Python 3.10.
+
+```bash
+# 1. Criar e ativar um ambiente virtual
+python -m venv .venv
+.venv\Scripts\activate       # Windows
+source .venv/bin/activate    # Linux/Mac
+
+# 2. Instalar as dependências
+pip install -r requirements.txt
+```
+
+O dataset bruto (`Ecommerce.zip`) já está incluído em `data/raw/` — não precisa ser extraído manualmente, o notebook lê direto de dentro do zip.
+
+Depois, abra `notebooks/01_clusterizacao.ipynb` (Jupyter Notebook, JupyterLab ou VS Code) e execute todas as células em ordem, a partir da pasta `notebooks/` (os caminhos relativos do projeto — dados, modelos — são resolvidos a partir dela). Ao final da execução, o notebook sobrescreve:
+- `models/scaler.pkl` e `models/gmm_model.pkl` (modelo e scaler treinados)
+- `data/processed/customer_clusters.csv` e `data/processed/cluster_profile.csv` (tabela final do produto, seção 3.0)
+
+## Licença
+Distribuído sob a licença MIT. Veja [LICENSE](./LICENSE) para mais detalhes.
