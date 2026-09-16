@@ -1,8 +1,7 @@
 """RFM (Recency, Frequency, Monetary) feature engineering, one row per customer.
 
-Each feature is added by its own function (not just the `build_rfm_features()` wrapper)
-so a notebook can merge one feature at a time and check for new NAs after each merge --
-the same diagnostic a manual step-by-step build would show.
+Each feature is added by its own function so a notebook can merge one feature at a time
+and check for new NAs after each merge.
 """
 import pandas as pd
 
@@ -68,14 +67,3 @@ def add_qtde_returns(ref, returns):
     ref = pd.merge(ref, qtde_returns, how="left", on="customer_id")
     ref["qtde_returns"] = ref["qtde_returns"].fillna(0)
     return ref
-
-
-def build_rfm_features(df, returns, purchases):
-    """Convenience wrapper chaining every add_* step and dropping any remaining NA."""
-    ref = create_reference(df)
-    ref = add_gross_revenue(ref, purchases)
-    ref = add_recency(ref, df, purchases)
-    ref = add_qtde_products(ref, purchases)
-    ref = add_frequency(ref, purchases)
-    ref = add_qtde_returns(ref, returns)
-    return ref.dropna().reset_index(drop=True)

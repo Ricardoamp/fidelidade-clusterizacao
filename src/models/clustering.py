@@ -93,9 +93,3 @@ def train_final_model(X, k, random_state=RANDOM_STATE, n_init=300):
 def save_artifacts(scaler, model, models_dir="../models"):
     joblib.dump(scaler, f"{models_dir}/scaler.pkl")
     joblib.dump(model, f"{models_dir}/gmm_model.pkl")
-
-
-def load_artifacts(models_dir="../models"):
-    scaler = joblib.load(f"{models_dir}/scaler.pkl")
-    model = joblib.load(f"{models_dir}/gmm_model.pkl")
-    return scaler, model

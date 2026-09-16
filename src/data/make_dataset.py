@@ -1,9 +1,7 @@
 """Load and clean the raw e-commerce transactions dataset.
 
-Each step below is exposed separately (not just the `clean()` wrapper) so a notebook can
-call them one at a time and show diagnostics (NA counts, dtypes, shape) between steps --
-`clean()` is a convenience for callers (e.g. a future scoring script) that just want the
-end result.
+Each step below is exposed separately so a notebook can call them one at a time and show
+diagnostics (NA counts, dtypes, shape) between steps.
 """
 import zipfile
 
@@ -77,15 +75,6 @@ def filter_records(df):
     df = df[~df["customer_id"].isin(EXCLUDED_CUSTOMER_IDS)]
 
     return df.reset_index(drop=True)
-
-
-def clean(df_raw):
-    """Convenience wrapper chaining rename -> fill missing id -> fix dtypes -> filter."""
-    df = rename_columns(df_raw)
-    df = fill_missing_customer_id(df)
-    df = fix_dtypes(df)
-    df = filter_records(df)
-    return df
 
 
 def split_returns_purchases(df):
